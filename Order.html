@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Forma</title>
+    <link rel="stylesheet" type="text/css" href="Css/Order.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<body>
+    <div class="OrderShopWrapper">
+        <div class="Header">
+            <h1>Order Shop</h1>
+            <p>Sta zelite da porucite?</p>
+        </div>
+        <hr />
+        <div class="Products">
+            <h2>Izaberi artikal</h2>
+            <div class="ArticleWrapper">
+                <div class="SingleArticle">
+                    <div class="Article">
+                        <input type="checkbox">
+                        <img alt="cannon" src="Images/canon.png">
+                        <div class="NameAndDescription">
+                            <h2>Canon </h2>
+                            <p>Canon fotoaparati su poznati po širokom rasponu objektiva i naprednim opcijama.</p>
+                        </div>
+                    </div>
+                    <span>$15.00</span>
+                </div>
+                <div class="SingleArticle">
+                    <div class="Article">
+                        <input type="checkbox">
+                        <img alt='nikon' src="Images/nikon.png">
+                        <div class="NameAndDescription">
+                            <h2>Nikon </h2>
+                            <p>Nikon fotoaparati su poznati po visokoj kvaliteti slike i pouzdanosti.</p>
+                        </div>
+                    </div>
+                    <span>$30.00</span>
+                </div>
+                <div class="SingleArticle">
+                    <div class="Article">
+                        <input type="checkbox">
+                        <img alt="sony" src="Images/sony.png">
+                        <div class="NameAndDescription">
+                            <h2>Sony</h2>
+                            <p>Sony fotoaparati su poznati po inovativnoj tehnologiji i visokoj kvaliteti slike.</p>
+                        </div>
+                    </div>
+                    <span>$70.00</span>
+                </div>
+                <div class="TotalPrice">
+                    <h3>Total</h3>
+                    <span>$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="FormSection">
+            <form>
+                <div class="parent">
+                    <div>
+                        <label for="name_surname">Ime i Prezime:</label>
+                        <input class="fullInputs" id="name_surname" type="text" name="name_surname"
+                            oninput="this.value=this.value.replace(/[^a-zA-ZćčđšžĆČĐŠŽ]/g,' ');"
+                            placeholder="Marko Markovic">
+                    </div>
+                    <ul></ul>
+                </div>
+                <div class="parent">
+                    <div>
+                        <label for="email_address">Email adresa:</label>
+                        <input class="fullInputs" id="email_address" type="email" name="email_address"
+                            placeholder="Email ardesa">
+                    </div>
+                    <ul></ul>
+                </div>
+                <div>
+                    <div class="parent">
+                        <div>
+                            <label for="adress">Adresa stanovanja:</label>
+                            <input class="fullInputs" id="adress" type="text" name="adress" placeholder="Adresa">
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="NumberAndPlace">
+                        <div class="parent">
+                            <div class="phonesAndPlace">
+                                <label for="phone_number"> Telefon</label>
+                                <input class="halfInput" id="phone_number" type="tel" name="phone_number"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\d{3})(?=\d)/g, '$1 ')"
+                                    placeholder="000 111 222">
+                            </div>
+                            <ul></ul>
+                        </div>
+                        <div class="parent">
+                            <div class="phonesAndPlace">
+                                <label for="house_number">Kućni broj</label>
+                                <input class="halfInput" id="house_number" type="text" name="house_number"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\d{3})(?=\d)/g, '$1 ')"
+                                    placeholder="Kucni broj">
+                            </div>
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="NumberAndPlace">
+                    <div class="parent">
+                        <div class="phonesAndPlace">
+                            <label for="postal_code">Poštanski broj</label>
+                            <input class="halfInput" id="postal_code" type="text" name="postal_code"
+                                placeholder="Postanski kod">
+                        </div>
+                        <ul></ul>
+                    </div>
+                    <div class="parent">
+                        <div class="phonesAndPlace">
+                            <label for="city">Mjesto</label>
+                            <input class="halfInput" id="city" type="text" name="city" placeholder="Grad">
+                        </div>
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="FieldSpecial">
+                        <label for="field_special">Polje za posebne napomene:</label>
+                        <input id="field_special" type="text" name="field_special" placeholder="type...">
+                    </div>
+                    <ul></ul>
+                </div>
+        </div>
+
+        <div class="OderBtn">
+            <button>Order</button>
+        </div>
+        </form>
+
+        <div class="payment">
+            <img src="Images/visa.jpg" alt="Visa">
+            <img src="Images/payPal.png" alt="PayPal">
+            <img src="Images/masterCard.png" alt="masterCard">
+        </div>
+
+        <div class="delivery">
+            <img src="Images/order.jpg" alt="OrderLogo">
+        </div>
+
+    </div>
+
+
+    <script src="JS/Order.js"></script>
+</body>
+
+</html>
